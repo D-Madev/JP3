@@ -1,0 +1,41 @@
+.navbar {
+  background-color: var(--color-bg);
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 1rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+  
+}
+
+.navbar ul a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 0rem 0.5rem;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.navbar ul a:hover {
+  color: var(--color-primary);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+}
+
+.backdrop {
+}
