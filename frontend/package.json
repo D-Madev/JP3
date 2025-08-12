@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage": "https://d-madev.github.io/drakonis/",
+  "homepage": "https://d-madev.github.io/drakonis",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "ghpages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
