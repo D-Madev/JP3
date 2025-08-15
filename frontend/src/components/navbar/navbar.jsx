@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion"
-import { useLocation, NavLink, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import "./navbar.css"
+import { motion, AnimatePresence } from 'framer-motion'
+import { useLocation, NavLink, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import styles from './navbar.module.css'
 
 export default function Navbar({logo, links}) {
   const location = useLocation()
@@ -23,7 +23,7 @@ export default function Navbar({logo, links}) {
       {/* Variable para animar desapacion con estados globales */}
       {isVisible && (
         <motion.nav 
-          className="navbar" 
+          className={styles.navbar}
           key={"navbar"}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,23 +31,25 @@ export default function Navbar({logo, links}) {
           transition={{ duration: 0.5 }}>
 
             {/* Navbar logo */}
-            <Link to="/inicio" className="navbar-logo">
+            <Link to="/inicio" className={styles.logo}>
               <img src={logo} alt="logo-drakonis"/>
             </Link>
 
             
             {/* Hamburger menu */}
-            <span className={`hamburger ${menuOpen?'active':''}`} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
+            <span className={`${styles.hamburger} ${menuOpen?styles.active:''}`} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
 
             {/* Component to close hamburger menu */}
-            {menuOpen && (<div className="backdrop" onClick={() => setMenuOpen(false)}/>)}
+            {menuOpen && (<div className={styles.backdrop} onClick={() => setMenuOpen(false)}/>)}
 
             {/* Endpoints */}
-            <ul className={menuOpen ? 'open' : ''}>
+            <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
               {links.map(({ to, label }) => (
                 <li key={to}>
                   <NavLink to={to}
-                      className={({ isActive }) => isActive ? 'active' : '' }
+                      className={({ isActive }) => (
+                        `${styles.navLink} ${isActive ? styles.active : ''}`
+                      )}
                       onClick={() => setMenuOpen(false)}>
                     {label}
                   </NavLink>

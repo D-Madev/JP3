@@ -6,12 +6,12 @@
   justify-content: center;
 }
 
-.navbar-logo {
+.logo {
   position: absolute;
   left: 1rem;
 }
 
-.navbar ul {
+.navList {
   display: flex;
   list-style: none;
   gap: 1rem;
@@ -19,7 +19,7 @@
   
 }
 
-.navbar ul a {
+.navLink {
   position: relative;
   text-decoration: none;
   color: white;
@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 
-.navbar ul a:hover {
+.navLink:hover {
   color: var(--color-primary);
 }
 
@@ -37,5 +37,6 @@
   display: none;
 }
 
-.backdrop {
+.backdrop { 
+
 }

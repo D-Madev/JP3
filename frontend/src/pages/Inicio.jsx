@@ -1,5 +1,5 @@
 /* Navbar & props */
-import Navbar from "../components/navbar/navbar.jsx"
+import Navbar from "../components/navbar/Navbar.jsx"
 import logo from "../assets/image.webp"
 const links = [
   { to: '/categorias', label: 'Categorias' },
