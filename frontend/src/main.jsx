@@ -2,7 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter as Router } from 'react-router-dom' // Import 'BrowserRouter' in production
 import App from "./App"
-import './index.css'
+import './styles/global.css'
+import './styles/variables.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

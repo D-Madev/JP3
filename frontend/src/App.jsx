@@ -1,10 +1,10 @@
 import React, { Suspense, lazy } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/layout/layout.jsx'
-import Loading from './pages/Loading.jsx'
-import Error404 from './pages/Error404.jsx'
+import Loading from './pages/Loading/Loading.jsx'
+import NotFound from './pages/Error/NotFound/NotFound.jsx'
 
-const Inicio = lazy(() => import('./pages/Inicio.jsx'))
+const Home = lazy(() => import('./pages/Home/Home.jsx'))
 
 export default function App() {
 
@@ -12,15 +12,15 @@ export default function App() {
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route element={<Layout />}>
-          <Route index element={<Inicio />} />
-          <Route path='inicio' element={<Navigate to='/' replace />} />
+          <Route index element={<Home />} />
+          <Route path='home' element={<Navigate to='/' replace />} />
           {/* All the other endpoints */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
           {/* Error 404 */}
-          <Route path='*' element={<Error404 />} />
+          <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
     </Suspense>
