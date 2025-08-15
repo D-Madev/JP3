@@ -22,10 +22,6 @@ jobs:
         run: npm install
         working-directory: ./JP3
 
-      - name: Run CI
-        run: npm run ci
-        working-directory: ./JP3
-
       - name: Run semantic-release
         run: npx semantic-release
         working-directory: ./JP3
