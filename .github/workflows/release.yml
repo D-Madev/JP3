@@ -2,14 +2,14 @@ name: release
 
 on:
   push:
-    brnahces:
+    branches:
       - main: # branch principal
 
 jobs: 
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Chekout code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -19,9 +19,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm run ci
+        run: npm install
+        working-directory: ./JP3
 
-      - name: Run semantic-version
+      - name: Run CI
+        run: npm run ci
+        working-directory: ./JP3
+
+      - name: Run semantic-release
+        run: npx semantic-release
+        working-directory: ./JP3
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release  
