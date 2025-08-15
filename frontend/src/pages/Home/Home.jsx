@@ -1,5 +1,5 @@
 /* Navbar & props */
-import Navbar from "../components/navbar/Navbar.jsx"
+import Navbar from "../../components/navbar/Navbar.jsx"
 import logo from "../assets/image.webp"
 const links = [
   { to: '/categorias', label: 'Categorias' },
@@ -9,7 +9,7 @@ const links = [
   { to: '/carrito', label: 'Carrito' },
 ]
 
-export default function Inicio() {
+export default function Home() {
   return(
     <>
       <Navbar logo={logo} links={links} />
