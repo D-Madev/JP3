@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Layout from './components/layout/layout.jsx'
+import Layout from './layouts/MainLayout.jsx'
 import Loading from './pages/Loading/Loading.jsx'
 import NotFound from './pages/Error/NotFound/NotFound.jsx'
 
