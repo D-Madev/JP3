@@ -1,0 +1,27 @@
+name: release
+
+on:
+  push:
+    brnahces:
+      - main: # branch principal
+
+jobs: 
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chekout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm run ci
+
+      - name: Run semantic-version
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release  

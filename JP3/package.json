@@ -1,0 +1,73 @@
+{
+  "name": "frontend",
+  "homepage": "https://d-madev.github.io/drakonis",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugin": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        { "npmPublish": false }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "devh": "vite --host",
+    "build": "vite build",
+    "push":"git push && git pull",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "release": "dotenv semantic-release",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.12",
+    "gh-pages": "^6.3.0",
+    "motion": "^12.23.12",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.2.1",
+    "dotenv-cli": "^10.0.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "semantic-release": "^24.2.7",
+    "vite": "^7.1.0"
+  }
+}
