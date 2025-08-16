@@ -1,8 +1,8 @@
-# Drakonis
+# JP3
 
 ## 🛒 Descripción
 
-**Drakonis** es una tienda online dedicada a la venta de artículos impresos en 3D. Nuestro objetivo es combinar **innovación, diversión y diseño**, ofreciendo productos que transforman hogares y momentos familiares en experiencias memorables.
+**JP3** es una tienda online dedicada a la venta de artículos impresos en 3D. Nuestro objetivo es combinar **innovación, diversión y diseño**, ofreciendo productos que transforman hogares y momentos familiares en experiencias memorables.
 
 Desde juguetes para niños hasta decoración de interiores, nuestro catálogo está pensado para satisfacer gustos diversos, aportando **calidad, creatividad y personalidad** en cada producto.
 
@@ -65,8 +65,8 @@ src/
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/drakonis.git
-cd drakonis
+git clone https://github.com/tu-usuario/JP3.git
+cd JP3
 ```
 
 2. Instalar dependencias:
@@ -109,7 +109,7 @@ npm run build
 
 ## 📄 Licencia
 
-© 2025 Tu Nombre / Drakonis. Todos los derechos reservados.  
+© 2025 Tu Nombre / JP3. Todos los derechos reservados.  
 Prohibida la copia, distribución, modificación o uso sin autorización expresa del autor.
 
 ---
