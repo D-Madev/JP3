@@ -1,0 +1,120 @@
+.footer {
+  background-color: var(--color-bg-dark);
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+}
+
+.columna {
+  flex: 1 1 33%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* STYLES COLUMNA 1 */
+.logoCopy {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.copy {
+  font-size: 0.7rem;
+}
+
+/* STYLES COLUMNA 2 */
+.contact {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contactItem {
+  font-size: 0.7rem;
+  margin: 2px 0;
+}
+
+.contactItem a {
+  color: white;
+  text-decoration: none;
+  transition: color .4s;
+}
+
+.contactItem a:focus,
+.contactItem a:active,
+.contactItem a:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* STYLES COLUMNA 3 */
+.socialMedia {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listSocialMedia {
+  display: flex;
+  gap: 20px;
+}
+
+.listSocialItem {
+  color: var(--color-secondary);
+  background-color: var(--color-bg);
+  font-size: 1.5rem;
+  padding: 3px 6px;
+  border-radius: 100%;
+  transition: color .4s;
+  transition: scale .4s;
+}
+
+.listSocialItem:focus,
+.listSocialItem:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  scale: 1.1;
+}
+
+@media (max-width: 670px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .logoCopy {
+    margin: 0;
+  }
+
+  .contact,
+  .location,
+  .contactList,
+  .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .columna {
+    padding: 10px;
+  }
+}

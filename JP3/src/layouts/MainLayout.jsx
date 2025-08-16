@@ -1,12 +1,10 @@
-/* Outlet */
 import { Outlet } from 'react-router-dom'
-
-/* Navbar & props */
 import Navbar from "../components/navbar/Navbar.jsx"
+import Footer from '../components/footer/Footer.jsx'
+
+import DynamicBackground from "../components/ui/DynamicBackground.jsx"
 import logo from "/logo.webp"
 
-/* Dynamic Background */
-import DynamicBackground from "../components/ui/DynamicBackground.jsx"
 
 export default function MainLayout() {
   const links = [
@@ -22,6 +20,7 @@ export default function MainLayout() {
       <Navbar logo={logo} links={links} />
       {/* Aquí se renderizan las páginas hijas */}
       <Outlet />
+      <Footer logo={logo} />
     </DynamicBackground>
   )
 }
