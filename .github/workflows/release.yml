@@ -27,3 +27,6 @@ jobs:
         working-directory: ./JP3
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Forzamos que Git use el GH_TOKEN clásico
+          repositoryUrl: https://${{ secrets.GH_TOKEN }}@github.com/D-Madev/drakonis.git
