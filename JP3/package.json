@@ -39,7 +39,6 @@
     "dev": "vite",
     "devh": "vite --host",
     "build": "vite build",
-    "push":"git push && git pull",
     "lint": "eslint .",
     "preview": "vite preview",
     "release": "dotenv semantic-release",
