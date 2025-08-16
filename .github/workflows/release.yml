@@ -5,14 +5,20 @@ on:
     branches:
       - main
 
-jobs: 
+permissions:
+  contents: write
+  packages: write
+
+jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Necesario para que semantic-release vea todos los tags
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GH_TOKEN }}   # o secrets.GITHUB_TOKEN si usas el token integrado
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -21,12 +27,25 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: ./JP3
 
-      - name: Run semantic-release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release --repository-url https://${{ secrets.GH_TOKEN }}@github.com/D-Madev/drakonis.git
+      - name: Configure git (identidad del bot)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         working-directory: ./JP3
+
+      - name: Run semantic-release (dry run for debug)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          DEBUG: semantic-release:*
+        run: npx semantic-release --dry-run
+        working-directory: ./JP3
+
+      # Cuando el dry-run esté OK, cambiar --dry-run por la ejecución real:
+      #- name: Run semantic-release
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      #  run: npx semantic-release
+      #  working-directory: ./JP3
