@@ -31,8 +31,8 @@ export default function Navbar({logo, links}) {
           transition={{ duration: 0.5 }}>
 
             {/* Navbar logo */}
-            <Link to="/inicio" className={styles.logo}>
-              <img src={logo} alt="logo-drakonis"/>
+            <Link to="/inicio" className={styles.logoContainer}>
+              <img src={logo} alt="logo-drakonis" className={styles.logo}/>
             </Link>
 
             

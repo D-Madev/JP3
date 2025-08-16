@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 /* Navbar & props */
 import Navbar from "../components/navbar/Navbar.jsx"
-import logo from "../assets/image.webp"
+import logo from "/logo.webp"
 
 
 export default function MainLayout() {

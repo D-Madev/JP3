@@ -6,9 +6,15 @@
   justify-content: center;
 }
 
-.logo {
+.logoContainer {
   position: absolute;
   left: 1rem;
+  height: 40px;
+  width: 40px;
+}
+
+.logo {
+  border-radius: 100%;
 }
 
 .navList {
