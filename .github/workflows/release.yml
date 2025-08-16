@@ -27,5 +27,6 @@ jobs:
       - name: Run semantic-release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release --repository-url https://${{ secrets.GH_TOKEN }}@github.com/D-Madev/drakonis.git
         working-directory: ./JP3
