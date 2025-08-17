@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLocation, NavLink, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { FaSearch } from "react-icons/fa";
 import styles from './navbar.module.css'
 
 export default function Navbar({logo, links}) {
@@ -23,39 +24,49 @@ export default function Navbar({logo, links}) {
       {/* Variable para animar desapacion con estados globales */}
       {isVisible && (
         <motion.nav 
-          className={styles.navbar}
           key={"navbar"}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.5 }}>
 
+          <div className={styles.navbar}>
             {/* Navbar logo */}
             <Link to="/home" className={styles.logoContainer}>
               <img src={logo} alt="logo-drakonis" className={styles.logo}/>
             </Link>
 
-            
-            {/* Hamburger menu */}
-            <span className={[styles.hamburger, (menuOpen? styles.active : '')].join(' ')} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
+            <div>
+              {/* Searching input */}
+              <div className={styles.serching}>
+                <input type="text" name="search" id="search" className={styles.input} /> 
+                <div className={styles.searchIcon}>
+                  <FaSearch />
+                </div>
+              </div>
 
-            {/* Component to close hamburger menu */}
-            {menuOpen && (<div className={styles.backdrop} onClick={() => setMenuOpen(false)}/>)}
+              {/* Hamburger menu */}
+              <span className={[styles.hamburger, (menuOpen? styles.active : '')].join(' ')} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
 
-            {/* Endpoints */}
-            <ul className={[styles.navList, (menuOpen ? styles.open : '')].join(' ')}>
-              {links.map(({ to, label }) => (
-                <li key={to}>
-                  <NavLink to={to}
-                      className={({ isActive }) => (
-                        [styles.navLink, (isActive ? styles.active : '')].join(' ')
-                      )}
-                      onClick={() => setMenuOpen(false)}>
-                    {label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+              {/* Component to close hamburger menu */}
+              {menuOpen && (<div className={styles.backdrop} onClick={() => setMenuOpen(false)}/>)}
+
+              {/* Endpoints */}
+              <ul className={[styles.navList, (menuOpen ? styles.open : '')].join(' ')}>
+                {links.map(({ to, label, icon }) => (
+                  <li key={to}>
+                    <NavLink to={to}
+                        className={({ isActive }) => (
+                          [styles.navLink, (isActive ? styles.active : '')].join(' ')
+                        )}
+                        onClick={() => setMenuOpen(false)}>
+                      {label} {icon && <span className={styles.icon}>{icon}</span>}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </motion.nav>
       )}
     </AnimatePresence>

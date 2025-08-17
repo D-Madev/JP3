@@ -5,14 +5,17 @@ import Footer from '../components/footer/Footer.jsx'
 import DynamicBackground from "../components/ui/DynamicBackground.jsx"
 import logo from "/logo.webp"
 
+/* Import Icons */
+import { IoCartOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function MainLayout() {
   const links = [
-    { to: '/categorias', label: 'Categorias' },
-    { to: '/servicios', label: 'Servicios' },
+    { to: '/categorias', label: 'Categorias', icon: <IoIosArrowDown /> },
+    { to: '/servicios', label: 'Servicios', icon: <IoIosArrowDown /> },
     { to: '/envios', label: 'Envios' },
     { to: '/descuentos', label: 'Descuentos' },
-    { to: '/carrito', label: 'Carrito' },
+    { to: '/carrito', label: 'Carrito', icon: <IoCartOutline /> },
   ]
 
   return(
