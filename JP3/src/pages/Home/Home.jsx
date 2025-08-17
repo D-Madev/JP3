@@ -2,8 +2,12 @@ import styles from './Home.module.css'
 
 export default function Home() {
   return(
-    <h1 className={styles.title}>
-      This is the Home Page
-    </h1>
+    <section className={styles.products}>
+      <div className={styles.subProducts}>
+        <h2 className={styles.title}>Nuestros productos</h2>
+
+        <button className={styles.button}>Ver catálogo</button>
+      </div>
+    </section>
   )
 }
