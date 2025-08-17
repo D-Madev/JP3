@@ -24,6 +24,12 @@
   /* border: solid 1px black; */
 }
 
+.grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
 .button {
   background-color: var(--color-secondary);
   color: white;
