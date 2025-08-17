@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/D-Madev/JP3/compare/v1.1.0...v1.2.0) (2025-08-17)
+
+
+### Features
+
+* **DynamicBackground:** componente para generar background dinamico ([e255353](https://github.com/D-Madev/JP3/commit/e2553535399837046fa638d6fe34a8e5cc30659a))
+* **Footer:** agrego componente footer, fontawesome ([91de756](https://github.com/D-Madev/JP3/commit/91de756e50d1bd0f29aa2d359af555becc771a39))
+* **navbar:** agrego menu hamburguesa, responsividad al navbar ([0ddc897](https://github.com/D-Madev/JP3/commit/0ddc897a0c09f1775a83e96127ff8b78ff7ad614))
+
 # [1.1.0](https://github.com/D-Madev/JP3/compare/v1.0.0...v1.1.0) (2025-08-16)
 
 
