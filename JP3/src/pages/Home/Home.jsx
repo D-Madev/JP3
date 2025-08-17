@@ -10,6 +10,9 @@ export default function Home() {
     {img: image, title: 'T-REX puzzle', price: 20},
     {img: image1, title: 'Tetris game', price: 30},
     {img: image2, title: 'Triceratops puzzle', price: 15},
+    {img: image, title: 'T-REX puzzle', price: 20},
+    {img: image1, title: 'Tetris game', price: 30},
+    {img: image2, title: 'Triceratops puzzle', price: 15},
   ]
 
   return(
