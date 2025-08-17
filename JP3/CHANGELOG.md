@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/D-Madev/JP3/compare/v1.3.0...v1.4.0) (2025-08-17)
+
+
+### Features
+
+* **home:** carcaza del homepage lista ([9d02955](https://github.com/D-Madev/JP3/commit/9d02955426f4ffd503553ee77df9e175a1c69cb5))
+* **ProductCard:** creo componente de cards con estilos particulares, view provicional de homw ([b0ef306](https://github.com/D-Madev/JP3/commit/b0ef306634a18f7554a9f95ec0b5560201d62d07))
+
 # [1.3.0](https://github.com/D-Madev/JP3/compare/v1.2.0...v1.3.0) (2025-08-17)
 
 
