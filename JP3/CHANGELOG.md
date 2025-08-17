@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/D-Madev/JP3/compare/v1.0.0...v1.1.0) (2025-08-16)
+
+
+### Bug Fixes
+
+* **index:** perfecciono meta-tags y agrego JSON-LD para mejor SEO ([97fc9ae](https://github.com/D-Madev/JP3/commit/97fc9ae0053b9e8f0c525bb2087008d30ff96bf0))
+* **package.json:** cambio de nombre del repositorio y marca ([bff83ed](https://github.com/D-Madev/JP3/commit/bff83ed6705df6e0e8e5103271651ad532ae3179))
+
+
+### Features
+
+* **index:** agrego meta-tags ([04a1932](https://github.com/D-Madev/JP3/commit/04a193289a48e19e059cfc4eb41d0f5f650b80a1))
+
 # 1.0.0 (2025-08-16)
 
 

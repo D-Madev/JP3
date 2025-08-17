@@ -31,24 +31,24 @@ export default function Navbar({logo, links}) {
           transition={{ duration: 0.5 }}>
 
             {/* Navbar logo */}
-            <Link to="/inicio" className={styles.logoContainer}>
+            <Link to="/home" className={styles.logoContainer}>
               <img src={logo} alt="logo-drakonis" className={styles.logo}/>
             </Link>
 
             
             {/* Hamburger menu */}
-            <span className={`${styles.hamburger} ${menuOpen?styles.active:''}`} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
+            <span className={[styles.hamburger, (menuOpen? styles.active : '')].join(' ')} onClick={() => setMenuOpen(!menuOpen)}>☰</span>
 
             {/* Component to close hamburger menu */}
             {menuOpen && (<div className={styles.backdrop} onClick={() => setMenuOpen(false)}/>)}
 
             {/* Endpoints */}
-            <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
+            <ul className={[styles.navList, (menuOpen ? styles.open : '')].join(' ')}>
               {links.map(({ to, label }) => (
                 <li key={to}>
                   <NavLink to={to}
                       className={({ isActive }) => (
-                        `${styles.navLink} ${isActive ? styles.active : ''}`
+                        [styles.navLink, (isActive ? styles.active : '')].join(' ')
                       )}
                       onClick={() => setMenuOpen(false)}>
                     {label}
