@@ -65,7 +65,7 @@ src/
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/JP3.git
+git clone https://github.com/D-Madev/JP3.git
 cd JP3
 ```
 
@@ -109,7 +109,7 @@ npm run build
 
 ## 📄 Licencia
 
-© 2025 Tu Nombre / JP3. Todos los derechos reservados.  
+© 2025 Matias Seba Mallo (D-Madev) / JP3. Todos los derechos reservados.  
 Prohibida la copia, distribución, modificación o uso sin autorización expresa del autor.
 
 ---
