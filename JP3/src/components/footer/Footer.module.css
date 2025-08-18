@@ -3,6 +3,13 @@
   justify-content: space-between;
   gap: 20px;
   display: flex;
+
+  box-shadow:
+  0 -8px 12px 5px rgba(15, 20, 25, 0.8),
+  0 -12px 24px 12px rgba(15, 20, 25, 0.7),
+  0 -20px 50px 30px rgba(15, 20, 25, 0.6),
+  0 -40px 80px 40px rgba(15, 20, 25, 0.5),
+  0 -80px 160px 80px rgba(15, 20, 25, 0.4);
 }
 
 .columna {
