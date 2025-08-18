@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/D-Madev/JP3/compare/v1.4.0...v1.5.0) (2025-08-18)
+
+
+### Features
+
+* **carousel:** creo componente para mostrar imagenes en el home ([69bb4d9](https://github.com/D-Madev/JP3/commit/69bb4d98c95d06ffe4dd2d3a8fbc95e81d04c65b))
+
 # [1.4.0](https://github.com/D-Madev/JP3/compare/v1.3.0...v1.4.0) (2025-08-17)
 
 
