@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import ProductCard from '../../components/ProductCards/ProductCard'
+import Carousel from './Carousel.jsx'
 
 import image from '../../assets/trex.webp'
 import image1 from '../../assets/tetris-game-0.webp'
@@ -16,24 +17,27 @@ export default function Home() {
   ]
 
   return(
-    <section className={styles.products}>
-      <div className={styles.subProducts}>
-        <h2 className={styles.title}>Nuestros productos</h2>
+    <>
+        <Carousel images={[image, image1, image2, image, image1, image2]}/>
+        <section className={styles.products}>
+        <div className={styles.subProducts}>
+          <h2 className={styles.title}>Nuestros productos</h2>
 
-        <ul className={styles.grid} >
-          {cards.map((p, i) => (
-            <li key={p.title + i} className={styles.item} role="listitem">
-              <ProductCard
-                img={p.img}
-                title={p.title}
-                price={p.price}
-              />
-            </li>
-          ))}
-        </ul>
+          <ul className={styles.grid} >
+            {cards.map((p, i) => (
+              <li key={p.title + i} className={styles.item} role="listitem">
+                <ProductCard
+                  img={p.img}
+                  title={p.title}
+                  price={p.price}
+                />
+              </li>
+            ))}
+          </ul>
 
-        <button className={styles.button}>Ver catálogo</button>
-      </div>
-    </section>
+          <button className={styles.button}>Ver catálogo</button>
+        </div>
+      </section>
+    </>
   )
 }
