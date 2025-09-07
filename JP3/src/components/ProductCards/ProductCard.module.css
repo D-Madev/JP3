@@ -1,45 +1,36 @@
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.producCard {
+  height: 300px;
+  width: 250px;
+  border: solid 1px white;
+  border-radius: 10px;
+  color: white;
 
-  padding: 5px;
-  border: solid 2px white;
-  border-radius: 15px;
-
-  width: 160px;
   transition: scale 0.5s ease, background-color 0.5s ease;
-
   cursor: pointer;
 }
 
 .image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  object-position: center;
-  object-fit: cover;
-
-  width: 150px;
-  height: 150px;
-  margin: 0 5px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  height: 220px;
+  width: 250px;
 }
 
 .title {
-  font-size: .9rem;
-  margin: 10px 0 0 0;
+  text-align: left;
+  margin: 10px;
 }
 
 .price {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--color-primary);
+  text-align: right;
+  margin: 0 10px;
 }
 
-.product:focus,
-.product:hover {
+.linkless {
+  text-decoration: none;
+}
+
+.producCard:focus,
+.producCard:hover {
   background-color: #5c84b42d;
   scale: 1.1;
 }
