@@ -13,6 +13,7 @@ export default function MainLayout() {
   const links = [
     { to: '/categorias', label: 'Categorias', icon: <IoIosArrowDown /> },
     { to: '/servicios', label: 'Servicios', icon: <IoIosArrowDown /> },
+    { to: '/catalogo', label: 'Catalogo' },
     { to: '/envios', label: 'Envios' },
     { to: '/descuentos', label: 'Descuentos' },
     { to: '/carrito', label: 'Carrito', icon: <IoCartOutline /> },
