@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import ProductCard from '../../components/ProductCards/ProductCard'
+import ProductCard from '../../components/MiniProductCards/MiniProductCard.jsx'
 import Carousel from './Carousel.jsx'
 
 import image from '../../assets/trex.webp'
