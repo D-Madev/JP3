@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/D-Madev/JP3/compare/v1.5.0...v1.6.0) (2025-09-08)
+
+
+### Features
+
+* **catalogo:** agrego el endpoint a al navbar ([77cce9b](https://github.com/D-Madev/JP3/commit/77cce9b71d66c91ac2b58083f1060bac5faefce1))
+* **catalogo:** agrego la funcionalidad del boton para navegar y ver el catalogo ([7520920](https://github.com/D-Madev/JP3/commit/752092028c17e59cd3742f8f360eb65083f579ee))
+* **catalogo:** agrego pagina de catalogo con las cards de product card ([d137024](https://github.com/D-Madev/JP3/commit/d13702474a4877126733f505477e17f29fae84c8))
+
 # [1.5.0](https://github.com/D-Madev/JP3/compare/v1.4.0...v1.5.0) (2025-08-18)
 
 
