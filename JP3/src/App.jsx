@@ -5,7 +5,7 @@ import Loading from './pages/Loading/Loading.jsx'
 import NotFound from './pages/Error/NotFound/NotFound.jsx'
 
 const Home = lazy(() => import('./pages/Home/Home.jsx'))
-const Catalogo = lazy(() => import('./pages/Catalogo/Catalogo.jsx'))
+const Catalog = lazy(() => import('./pages/Catalog/Catalog.jsx'))
 
 export default function App() {
 
@@ -17,7 +17,7 @@ export default function App() {
           <Route path='home' element={<Navigate to='/' replace />} />
           <Route path='inicio' element={<Navigate to='/' replace />} />
           <Route path='index' element={<Navigate to='/' replace />} />
-          <Route path='catalogo' element={<Catalogo />} />
+          <Route path='catalog' element={<Catalog />} />
           {/* All the other endpoints */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
           {/* <Route path='/inicio' element={<Navigate to='/' replace />} /> */}
